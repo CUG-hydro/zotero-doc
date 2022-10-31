@@ -38,7 +38,7 @@
             <term name="close-quote">”</term>
             <term name="open-inner-quote">‘</term>
             <term name="close-inner-quote">’</term>
-            <term name="space-et-al"> 等</term>
+            <term name="space-et-al">等</term>
         </terms>
     </locale>
     <locale>
@@ -477,7 +477,7 @@
             </group>
         </layout>
     </citation>
-    <bibliography entry-spacing="0" second-field-align="flush">
+    <!-- <bibliography entry-spacing="0" second-field-align="flush">
         <sort>
             <key macro="author"/>
         </sort>
@@ -485,9 +485,19 @@
             <text variable="citation-number" prefix="" suffix="."/>
             <text macro="entry-layout"/>
         </layout>
-        <!-- <layout suffix=".">
+    </bibliography> -->
+    <bibliography entry-spacing="0" et-al-min="4" et-al-use-first="3" second-field-align="flush">
+    <sort>
+      <key macro="author"/>
+      <key macro="issued-year"/>
+    </sort>
+    <layout suffix="." locale="en">
       <text variable="citation-number" prefix="[" suffix="]"/>
       <text macro="entry-layout"/>
-    </layout> -->
-    </bibliography>
+    </layout>
+    <layout suffix=".">
+      <text variable="citation-number" prefix="[" suffix="]"/>
+      <text macro="entry-layout"/>
+    </layout>
+  </bibliography>
 </style>
