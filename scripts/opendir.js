@@ -1,4 +1,5 @@
 // https://github.com/windingwind/zotero-actions-tags/discussions/132
+// ctrl+e
 if (!item) return;
 
 async function getPDFAttachmentPath(item) {
