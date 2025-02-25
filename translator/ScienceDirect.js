@@ -1,15 +1,15 @@
 {
-	"translatorID": "b6d0a7a-d076-48ae-b2f0-b6de28b194e",
+	"translatorID": "df41fb78-34de-469e-8b32-766551176c32",
 	"label": "ScienceDirect",
-	"creator": "Michael Berkowitz and Aurimas Vinckevicius",
-	"target": "^https?://[^/]*science-?direct\\.com[^/]*/((science/)?(article/|(journal|bookseries|book|handbook)/\\d)|search[?/]|journal/[^/]+/vol)",
-	"minVersion": "3.0",
+	"creator": "Dongdong Kong",
+	"target": "^https?://[^/]*science-?direct\\\\.com[^/]*/((science/)?(article/|(journal|bookseries|book|handbook)/\\\\d)|search[?/]|journal/[^/]+/vol)",
+	"minVersion": "5.0",
 	"maxVersion": "",
 	"priority": 100,
 	"inRepository": true,
 	"translatorType": 4,
 	"browserSupport": "gcsibv",
-	"lastUpdated": "2024-10-03 14:17:12"
+	"lastUpdated": "2025-02-20 02:39:05"
 }
 
 function detectWeb(doc, url) {
@@ -520,7 +520,6 @@ async function scrape(doc, url, isSearchResult = false) {
 			return;
 		}
 	}
-
 
 	// On some older article pages, there seems to be a different form
 	// that uses GET

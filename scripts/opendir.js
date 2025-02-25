@@ -20,17 +20,19 @@ async function getPDFAttachmentPath(item) {
   }
   return null;
 }
+// let dir = await relativePath(item);
+// let basename = await getPDFAttachmentPath(item);
 
 function dirname(path) {
   return path.replace(/[^/\\]+$/, '');
 }
 
 async function opendir(item) {
+  let app = "C:\\Windows\\explorer.exe";
   let path = await getPDFAttachmentPath(item);
   if (path) {
     let dir = dirname(path);
-    let app = "C:\\Windows\\explorer.exe";
-    Zotero.launchFileWithApplication(dir, app);
+    await Zotero.launchFileWithApplication(dir, app);
     return dir;
   } else {
     return "null";
